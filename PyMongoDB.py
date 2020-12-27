@@ -6,6 +6,4 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-x = mycol.delete_many({})
-
-print(x.deleted_count)
+mycol.drop()
