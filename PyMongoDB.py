@@ -6,6 +6,10 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-for x in mycol.find().sort("name", -1):
-    print(x)
+myquery = {"Country": "India"}
+new = {"$set": {"Country": "Canada"}}
 
+mycol.update_one(myquery, new)
+
+for x in mycol.find():
+    print(x)
