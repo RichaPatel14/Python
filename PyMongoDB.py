@@ -7,10 +7,11 @@ mydb = myclient['test']
 mycol = mydb['customers']
 
 list = [
-    {"name": "Richa", "Country: "Canada"},
-    {"name": "Darshil", "Country: "India"}
+    {"_id": 1, "name": "Richa", "Country: "Canada"},
+    {"_id": 2, "name": "Darshil", "Country: "India"}
 ]
 x = mycol.insert_many(list)
 
 if x:
     print("Enter Successfully")
+    print(x.inserted_ids)
