@@ -6,8 +6,6 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-myquery = {"Country": {"$regex": "^C"}}
-
-for x in mycol.find(myquery):
+for x in mycol.find().sort("name"):
     print(x)
 
