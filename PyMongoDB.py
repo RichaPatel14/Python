@@ -6,5 +6,6 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-for x in mycol.find():
-  print(x)
+for x in mycol.find({},{"_id": 0}):
+    print(x)
+
