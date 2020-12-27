@@ -6,6 +6,6 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-for x in mycol.find().sort("name"):
+for x in mycol.find().sort("name", -1):
     print(x)
 
