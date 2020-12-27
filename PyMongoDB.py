@@ -6,7 +6,7 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-myquery = {"Country": "Canada"}
+myquery = {"Country": {"$gt": "C"}}
 
 for x in mycol.find(myquery):
     print(x)
