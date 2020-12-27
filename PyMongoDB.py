@@ -6,12 +6,5 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-list = [
-    {"_id": 1, "name": "Richa", "Country: "Canada"},
-    {"_id": 2, "name": "Darshil", "Country: "India"}
-]
-x = mycol.insert_many(list)
-
-if x:
-    print("Enter Successfully")
-    print(x.inserted_ids)
+x = mycol.find_one()
+print(x)
