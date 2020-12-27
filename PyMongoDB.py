@@ -6,7 +6,7 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-myquery = {"Country": {"$gt": "C"}}
+myquery = {"Country": {"$regex": "^C"}}
 
 for x in mycol.find(myquery):
     print(x)
