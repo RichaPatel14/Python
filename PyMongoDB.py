@@ -8,7 +8,7 @@ mycol = mydb['customers']
 
 myquery = {"name": "Darshil"}
 
-mycol.delete_one(myquery)
+mycol.delete_many(myquery)
 
 for x in mycol.find():
     print(x)
