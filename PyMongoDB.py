@@ -6,10 +6,10 @@ mydb = myclient['test']
 
 mycol = mydb['customers']
 
-myquery = {"Country": "India"}
-new = {"$set": {"Country": "Canada"}}
+myquery = {"name": {"$regex": "^D"}}
+new = {"$set": {"Country": "India"}}
 
-mycol.update_one(myquery, new)
+mycol.update_many(myquery, new)
 
 for x in mycol.find():
     print(x)
